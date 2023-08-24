@@ -1,7 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 
-// ... (votre code existant)
 
 @Component({
   selector: 'app-list',
@@ -26,7 +25,6 @@ export class ListComponent {
     this.list.tasks.push(task);
   }
 
-  // Fonction pour le glisser-déposer
   drop(event: CdkDragDrop<string[]>) {
     moveItemInArray(this.list.tasks, event.previousIndex, event.currentIndex);
   }
