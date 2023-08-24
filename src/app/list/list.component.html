@@ -1,0 +1,16 @@
+<div class="card">
+    <div class="card-body">
+      <h2 class="card-title">{{ list.title }}</h2>
+      <ul class="list-group">
+        <li class="list-group-item" *ngFor="let task of list.tasks">{{ task }}</li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="card mt-3">
+    <div class="card-body">
+      <input [(ngModel)]="newTask" name="newTask" placeholder="nouvelle tache" class="form-control">
+      <button (click)="addTask()" class="btn btn-primary mt-2">ajouter une tache</button>
+    </div>
+  </div>
+  
